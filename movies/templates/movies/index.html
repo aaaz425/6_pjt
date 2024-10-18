@@ -1,11 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Home</h1>
-</body>
-</html>
+{% extends "base.html" %}
+{% block style %}
+    .con1{
+      display:flex;
+      justify-content: space-between;     
+      
+    }
+
+    .box{
+      display:flex;
+      flex-direction: column;
+      border: 2px;
+      border-style: solid;
+      border-color: #d9d9d9;
+      border-radius: 5px;
+      width: 400px;
+    
+    }
+
+    .smbox{
+      display: flex;
+      gap: 10px;
+      border-top: 2px solid #d9d9d9;
+      padding: 20px;
+    }
+
+    .title{
+      background-color: #f2f2f2;
+      padding: 10px 20px;
+
+    }
+
+
+
+
+{% endblock style %}
+{% block content %}
+
+<h1>INDEX PAGE</h1>
+<div class='con1'>
+
+  <div class='box'> 
+    <div class='title'>반지의 제왕</div>
+    <div class='smbox'>
+      <a href="#">DETAIL</a>
+      <button type='button'>좋아요</button>     
+    </div>
+  </div>
+
+  <div class='box'> 
+    <div class='title'>쇼생크 탈출</div>
+    <div class='smbox'>
+      <a href="#">DETAIL</a>
+      <button type='button'>좋아요</button>     
+    </div>
+  </div>
+
+<div>
+
+</div>
+{% endblock content %}
+

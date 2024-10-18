@@ -1,11 +1,62 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav bar</title>
+    <style>   
+      li {
+        list-style-type: none;
+
+      }
+
+      
+      .navbar {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          padding: 8px 24px;
+   
+
+      }
+    
+      .navbar__menu {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          width: 100%;
+          gap: 10%;
+          background-color: #111;
+
+      }
+
+     
+      .navbar__menu li a {
+        color: #FFF;
+      }
+
+
+
+
+    {% comment %} .navbar__menu li {
+        width: 100%;
+        text-align: center;
+    } {% endcomment %}
+    {% block style %}
+    {% endblock style %}
+    </style>
 </head>
 <body>
-  
+    <nav class="navbar">
+        <ul class="navbar__menu">
+            <li><a href="#">Movie</a></li>
+            <li><a href="#">영화등록</a></li>
+            <li><a href="#">회원정보수정</a></li>
+            <li><a href="#">프로필</a></li>
+            <li><a href="#">로그아웃</a></li>
+        </ul>
+    </nav>
+    {% block content %}
+    {% endblock content %}
 </body>
 </html>
